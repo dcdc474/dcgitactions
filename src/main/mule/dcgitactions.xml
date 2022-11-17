@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="dcgitactionsFlow" doc:id="2f5ba4e1-f4e7-472a-90d0-900a77c5c3b5" >
 		<http:listener doc:name="Listener" doc:id="be7f2798-1a46-402a-97d3-59d755869f90" config-ref="HTTP_Listener_config" path="/dcgitaction"/>
-		<set-payload value="This is dcGitActions" doc:name="Set Payload" doc:id="b9507f37-5b7d-49d0-aa41-7e46cda82856" />
+		<set-payload value="This is dc Git Actions" doc:name="Set Payload" doc:id="b9507f37-5b7d-49d0-aa41-7e46cda82856" />
 	</flow>
 </mule>
