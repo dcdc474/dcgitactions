@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="dd188cea-6544-40c7-9d69-e07a740e9e19" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="dcgitactionsFlow" doc:id="2f5ba4e1-f4e7-472a-90d0-900a77c5c3b5" >
+		<http:listener doc:name="Listener" doc:id="be7f2798-1a46-402a-97d3-59d755869f90" config-ref="HTTP_Listener_config" path="/dcgitaction"/>
+		<set-payload value="This is dcGitActions" doc:name="Set Payload" doc:id="b9507f37-5b7d-49d0-aa41-7e46cda82856" />
+	</flow>
+</mule>
